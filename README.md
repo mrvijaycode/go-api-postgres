@@ -5,7 +5,7 @@
 ### Usage
 Clone the repository with:
 ```bash
-git clone gitlab.com/idoko/bucketeer
+git clone github.com/mrvijaycode/go-api-postgres
 ```
 
 Copy the `env.example` file to a `.env` file.
@@ -32,4 +32,14 @@ $ docker-compose stop server
 $ docker-compose build server
 $ docker-compose up --no-start server
 $ docker-compose start server
+```
+
+### Execution
+Our API will expose the following endpoints:
+```
+POST /items to add a new item to the list
+GET /items to fetch all existing items in the list
+GET /items/{itemId} to fetch a single item from the list using its ID
+PUT /items/{itemId} to update an existing item
+DELETE /items/{itemId} to delete an item from the list
 ```

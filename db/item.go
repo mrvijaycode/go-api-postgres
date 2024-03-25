@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 
-	"gitlab.com/idoko/bucketeer/models"
+	"github.com/mrvijaycode/go-api-postgres/models"
 )
 
 func (db Database) GetAllItems() (*models.ItemList, error) {

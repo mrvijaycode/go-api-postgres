@@ -3,8 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"gitlab.com/idoko/bucketeer/db"
-	"gitlab.com/idoko/bucketeer/handler"
 	"log"
 	"net"
 	"net/http"
@@ -12,6 +10,9 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/mrvijaycode/go-api-postgres/db"
+	"github.com/mrvijaycode/go-api-postgres/handler"
 )
 
 func main() {
@@ -30,7 +31,7 @@ func main() {
 		log.Fatalf("Could not set up database: %v", err)
 	}
 	defer database.Conn.Close()
-	
+
 	httpHandler := handler.NewHandler(database)
 	server := &http.Server{
 		Handler: httpHandler,

@@ -8,8 +8,8 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
-	"gitlab.com/idoko/bucketeer/db"
-	"gitlab.com/idoko/bucketeer/models"
+	"github.com/mrvijaycode/go-api-postgres/db"
+	"github.com/mrvijaycode/go-api-postgres/models"
 )
 
 var itemIDKey = "itemID"
